@@ -18,7 +18,7 @@ def load_environment(env_file: Path = BACKEND_DIR / ".env") -> bool:
 load_environment()
 
 HOST = os.getenv("HOST", "0.0.0.0")
-PORT = int(os.getenv("PORT", "8000"))
+PORT = int(os.getenv("PORT", "8100"))
 
 
 def env_path(name: str, default: Path) -> Path:

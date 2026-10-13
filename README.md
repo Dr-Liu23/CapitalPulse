@@ -115,7 +115,7 @@ bun install --frozen-lockfile
 
 ```dotenv
 HOST=0.0.0.0
-PORT=8000
+PORT=8100
 
 SECTOR_FLOW_ENABLED=true
 SECTOR_FLOW_POLL_SECONDS=3
@@ -127,8 +127,8 @@ SECTOR_FLOW_RETENTION_DAYS=30
 #### 前端：`frontend/.env.local`
 
 ```dotenv
-VANE_API_URL=http://localhost:8000
-# NEXT_PUBLIC_SECTOR_FLOW_WS_URL=ws://localhost:8000/ws/sector-flow
+VANE_API_URL=http://localhost:8100
+# NEXT_PUBLIC_SECTOR_FLOW_WS_URL=ws://localhost:8100/ws/sector-flow
 ```
 
 ### 6. 启动开发环境

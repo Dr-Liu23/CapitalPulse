@@ -307,7 +307,7 @@ function socketUrl(): string {
     return process.env.NEXT_PUBLIC_SECTOR_FLOW_WS_URL
   }
   const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
-  return `${protocol}//${window.location.hostname}:8000/ws/sector-flow`
+  return `${protocol}//${window.location.hostname}:8100/ws/sector-flow`
 }
 
 function stockSocketUrl(stock: StockSearchResult): string {
@@ -315,7 +315,7 @@ function stockSocketUrl(stock: StockSearchResult): string {
   const configured = process.env.NEXT_PUBLIC_SECTOR_FLOW_WS_URL
   const url = configured
     ? new URL(configured)
-    : new URL(`${protocol}//${window.location.hostname}:8000/ws/stock-flow`)
+    : new URL(`${protocol}//${window.location.hostname}:8100/ws/stock-flow`)
   url.pathname = '/ws/stock-flow'
   url.search = ''
   url.searchParams.set('quote_id', stock.quote_id)

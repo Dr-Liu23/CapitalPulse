@@ -5,9 +5,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   // Proxy /api/finance/* requests to backend.
   // VANE_API_URL is a server-only variable (runtime-configurable in Docker).
-  // Defaults to localhost:8000 for local development.
+  // Defaults to localhost:8100 for local development.
   async rewrites() {
-    const apiUrl = process.env.VANE_API_URL ?? "http://localhost:8000";
+    const apiUrl = process.env.VANE_API_URL ?? "http://localhost:8100";
     return [
       {
         source: "/api/finance/:path*",
